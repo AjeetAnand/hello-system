@@ -10,7 +10,44 @@ EXPOSE 80                #port is same as node server sarted port number
 
 You can then build and run the Docker image:
 
-$ docker build -t hello-system .
-$ docker run -it --rm --name hi hello-system
+14. $ docker build -t hello-system .   # docker build -t hello-system ./.Dockerfile .
 
-# for more info https://github.com/nodejs/docker-node/blob/master/README.md#how-to-use-this-image
+15. $ docker run -it --rm --name MessageName hello-system
+
+16. $ docker run -it -p 3000:80 --name MessageName hello-system # Our port and Containers port
+
+17. $ docker run -it -p 3000:80 -v //d/DockerTest/.:/usr/src/app --name MessageName hello-system # change dynamic ie;nodemon
+
+# for more info https://github.com/nodejs/docker-node/blob/master/README.md#how-to-use-this-image 
+
+
+
+
+# Work with virtual machine
+1. Docker -v
+
+2. docker run hello-world
+
+3. docker run -it ubuntu
+
+4. ls
+
+#create a container need to give name
+
+5. docker run -it --name ContainerName ubuntu
+
+6. ctrl+P-Q ==> docker ps # show the container status
+
+7. docker attach ContainerName ==> connect with docker
+
+8. exit ==> will close the container.
+
+9. docker images
+
+10. docker rmi -f imageName # to remove images
+
+# docker ps # show the container status
+11. docker rm -f ContainerName # will remaove the container
+
+12. docker start ContainerName # Start in dettached mode #docker attach ContainerName ==> connect with docker
+

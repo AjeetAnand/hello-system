@@ -10,7 +10,7 @@ EXPOSE 80                #port is same as node server sarted port number
 
 You can then build and run the Docker image:
 
-14. $ docker build -t hello-system .   # docker build -t hello-system ./.Dockerfile .
+14. $ docker build -t hello-system .   # docker build -t hello-system -f ./.Dockerfile .
 
 15. $ docker run -it --rm --name MessageName hello-system
 
